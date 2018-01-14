@@ -1,0 +1,26 @@
+﻿<div>testing customer
+    Customer Name: <input [(ngModel)]="currentCustomer.CustomerName" id="customerName" type="text"/><br />
+    Customer Code: <input [(ngModel)]="currentCustomer.CustomerCode" id="customerCode" type="text" /><br />
+    Customer Name: <input [(ngModel)]="currentCustomer.CustomerAmount" id="customerAmount" type="number" /><br />
+
+    <input type="button" (click)="Add()" value="Add Customer"/>
+    <!--<b>{{currentCustomer.CustomerName}}</b><br />-->
+
+
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Code</td> 
+            <td>Amount</td>
+            <td>Edit</td>
+        </tr>
+        <tr *ngFor="let cust of customers">
+            <td>{{cust.CustomerName}}</td>
+            <td>{{cust.CustomerCode}}</td>
+            <td>{{cust.CustomerAmount}}</td>
+
+            <td><a herf="#" (click)="Select(cust)" >Select</a></td>
+        </tr>
+    </table>
+    
+</div>
